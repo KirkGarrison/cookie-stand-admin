@@ -3,7 +3,7 @@ export default function ReportTable(props) {
     function manageShowTable(props) {
   
       if (props.data.length == 0) {
-        return <h2> No Cookie Stands Available</h2>
+        return <h2 className="m-4 font-semibold"> No Cookie Stands Available</h2>
       }
       else {
         return displayTable(props)

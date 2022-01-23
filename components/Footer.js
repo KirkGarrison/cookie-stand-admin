@@ -14,6 +14,8 @@ export default function Footer(props) {
     // }
 
     return (
+        <div className="bg-emerald-300 py-3 ">
       <p> 0 locations world wide</p>
+      </div>
 )
   }
