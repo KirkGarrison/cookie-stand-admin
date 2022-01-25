@@ -27,6 +27,8 @@ export default function Main() {
     setTotalLocationData([...totalLocationData, locationData]);
   }
 
+  const stands = totalLocationData ? totalLocationData.length : 0;
+
   return (
       <>    
       <main>
@@ -35,7 +37,7 @@ export default function Main() {
         <CreateForm handleForm={handleForm} />
       </div>
       <ReportTable data={totalLocationData} times = {hoursOfOperation} />
-      {/* <Footer data={totalLocationData} /> */}
+      <Footer stands={stands} />
     </main>
     
     </>

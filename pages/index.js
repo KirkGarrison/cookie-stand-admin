@@ -1,18 +1,19 @@
-import Head from 'next/head'
-import Header from '../components/Header.js'
-import Main from '../components/Main.js'
-import Footer from '../components/Footer.js'
+import { useState } from 'react';
+import LoginForm from '../components/LoginForm.js'
+import CookieStandAdmin from '../components/CookieStandAdmin.js'
 
 export default function Home() {
-  return (
-    <body className=' bg-emerald-50 '>
-      <Head>
-        <title>Cookie Stand Admin</title>
-      </Head>
-      <Header />
-      <Main />
-      <Footer />
 
-    </body>
+  const [isUser, setIsUser] = useState(false)
+  function handleLogin(username, password) {
+    setIsUser(true);
+  }
+
+  return (
+  <>
+    {
+      isUser ?<CookieStandAdmin/> : <LoginForm onLogin={handleLogin}/>
+    }
+  </>
   )
 }
